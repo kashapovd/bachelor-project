@@ -1,0 +1,10 @@
+0.7
+2020.2
+Jun 10 2021
+20:04:57
+C:/Users/yaroslav/Desktop/bachelor-project/vivado/testbenches/clk_div/clk_div.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v,1681977084,verilog,,C:/Users/yaroslav/Desktop/bachelor-project/vivado/testbenches/clk_div/clk_div.srcs/sources_1/new/clk_div_tb.v,,design_1_wrapper,,,,,,,,
+C:/Users/yaroslav/Desktop/bachelor-project/vivado/testbenches/clk_div/clk_div.ip_user_files/bd/design_1/ip/design_1_clk_div_0_0/sim/design_1_clk_div_0_0.v,1681977084,verilog,,C:/Users/yaroslav/Desktop/bachelor-project/vivado/testbenches/clk_div/clk_div.ip_user_files/bd/design_1/sim/design_1.v,,design_1_clk_div_0_0,,,,,,,,
+C:/Users/yaroslav/Desktop/bachelor-project/vivado/testbenches/clk_div/clk_div.ip_user_files/bd/design_1/ipshared/74e0/clk_div.v,1681977084,verilog,,C:/Users/yaroslav/Desktop/bachelor-project/vivado/testbenches/clk_div/clk_div.ip_user_files/bd/design_1/ip/design_1_clk_div_0_0/sim/design_1_clk_div_0_0.v,,clk_div,,,,,,,,
+C:/Users/yaroslav/Desktop/bachelor-project/vivado/testbenches/clk_div/clk_div.ip_user_files/bd/design_1/sim/design_1.v,1681977084,verilog,,C:/Users/yaroslav/Desktop/bachelor-project/vivado/testbenches/clk_div/clk_div.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v,,design_1,,,,,,,,
+C:/Users/yaroslav/Desktop/bachelor-project/vivado/testbenches/clk_div/clk_div.sim/sim_1/behav/xsim/glbl.v,1623370582,verilog,,,,glbl,,,,,,,,
+C:/Users/yaroslav/Desktop/bachelor-project/vivado/testbenches/clk_div/clk_div.srcs/sources_1/new/clk_div_tb.v,1681978152,verilog,,,,clk_div_tb,,,,,,,,
