@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new/i2s_transceiver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2s_transceiver
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb

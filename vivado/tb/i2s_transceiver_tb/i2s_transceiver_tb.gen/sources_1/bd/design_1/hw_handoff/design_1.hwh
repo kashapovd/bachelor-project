@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 15 18:26:20 2023" VIVADOVERSION="2021.1">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="5000000" DIR="I" NAME="BCK" SIGIS="clk" SIGNAME="External_Ports_BCK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="bck"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="reset_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="left_channel" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_left_channel">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="left_channel"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="right_channel" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_right_channel">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="right_channel"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="LRCK" SIGIS="clk" SIGNAME="i2s_transceiver_0_lrck">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="lrck"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="DOUT" SIGIS="data" SIGNAME="i2s_transceiver_0_sdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="sdata"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="5" FULLNAME="/i2s_transceiver_0" HWVERSION="1.0" INSTANCE="i2s_transceiver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2s_transceiver" VLNV="xilinx.com:user:i2s_transceiver:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="WIDHT" VALUE="32"/>
+        <PARAMETER NAME="PRESC" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_i2s_transceiver_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="bck" SIGIS="undef" SIGNAME="External_Ports_BCK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="BCK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="lrck" SIGIS="undef" SIGNAME="i2s_transceiver_0_lrck">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LRCK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="sdata" SIGIS="undef" SIGNAME="i2s_transceiver_0_sdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="DOUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="left_channel" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_left_channel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="left_channel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="right_channel" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_right_channel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="right_channel"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

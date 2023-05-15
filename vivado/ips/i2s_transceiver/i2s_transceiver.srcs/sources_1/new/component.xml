@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>i2s_transceiver</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>reset_n</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>reset_n</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>i2s_transceiver</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>7ec52223</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>i2s_transceiver</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>7ec52223</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>75124c31</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>bck</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>reset_n</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>lrck</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>left_channel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.WIDHT&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>right_channel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.WIDHT&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>WIDHT</spirit:name>
+        <spirit:displayName>Widht</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WIDHT">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>PRESC</spirit:name>
+        <spirit:displayName>Presc</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PRESC">32</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>i2s_transceiver.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_7ec52223</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>i2s_transceiver.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/i2s_transceiver_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_75124c31</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>i2s_transceiver_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>WIDHT</spirit:name>
+      <spirit:displayName>Widht</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WIDHT">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>PRESC</spirit:name>
+      <spirit:displayName>Presc</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PRESC">32</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">i2s_transceiver_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">versal</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>i2s_transceiver_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>5</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-05-15T11:25:12Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@321e1227_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6f4328c1_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@622eb873_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4167ce85_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2943c71f_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@112a43e9_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3b2e99bc_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@45dd51a4_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2701daef_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e80ac28_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@66e1b5c5_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7826799b_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@19bd3ef4_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ea88862_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6fe97bf6_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4ba30ed2_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4bcf07aa_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6390c19a_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c417a64_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@621579f6_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1f81035f_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@27e0e3e0_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@d0a2b81_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c82381d_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@14b9c98d_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@58736754_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@37a5f240_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@33d66388_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@d5753ac_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@53fbc899_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a74212c_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@dc72fce_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@11db094e_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4329abd7_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6bf1558c_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2d08d20e_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ba46dc7_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@38a4658a_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a7dd57_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@a69fbe4_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@59af92b7_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@65e5a63c_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2834156f_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@31684e2c_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1395a8f4_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@787baf65_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@12616fd9_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@68bd7f74_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3170fff4_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57376677_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6f95eb57_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@118ed935_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2c6fc079_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@21ffdf16_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@73ddfdc1_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@a05ec4_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@51b606db_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6970cbaf_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@76d713a2_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@fa6af4f_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@54442135_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_transceiver/i2s_transceiver.srcs/sources_1/new</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5fb66046"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f8e4d08b"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="7ad49cf2"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="017e7837"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="0842fdae"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
