@@ -1,0 +1,30 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-289,-652",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_reset_n -pg 1 -lvl 0 -x -80 -y -490 -defaultsOSRD
+preplace port port-id_BCK -pg 1 -lvl 0 -x -80 -y -510 -defaultsOSRD
+preplace port port-id_LRCK -pg 1 -lvl 3 -x 700 -y -310 -defaultsOSRD
+preplace port port-id_i2s_data -pg 1 -lvl 3 -x 700 -y -290 -defaultsOSRD
+preplace portBus left_channel_out -pg 1 -lvl 3 -x 700 -y -410 -defaultsOSRD
+preplace portBus right_channel_out -pg 1 -lvl 3 -x 700 -y -390 -defaultsOSRD
+preplace portBus left_channel_in -pg 1 -lvl 0 -x -80 -y -390 -defaultsOSRD
+preplace portBus right_channel_in -pg 1 -lvl 0 -x -80 -y -370 -defaultsOSRD
+preplace inst i2s_receiver_0 -pg 1 -lvl 2 -x 510 -y -400 -defaultsOSRD
+preplace inst i2s_transceiver_0 -pg 1 -lvl 1 -x 180 -y -400 -defaultsOSRD
+preplace netloc i2s_receiver_0_left_channel 1 2 1 N -410
+preplace netloc i2s_receiver_0_right_channel 1 2 1 N -390
+preplace netloc BCK_1 1 0 2 -60 -500 320
+preplace netloc reset_n_1 1 0 2 -50 -490 310
+preplace netloc i2s_transceiver_0_lrck 1 1 2 310 -310 N
+preplace netloc i2s_transceiver_0_sdata 1 1 2 300 -290 N
+preplace netloc left_channel_in_1 1 0 1 N -390
+preplace netloc right_channel_in_1 1 0 1 N -370
+levelinfo -pg 1 -80 180 510 700
+pagesize -pg 1 -db -bbox -sgen -270 -740 900 180
+"
+}
+0

@@ -1,0 +1,185 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB5F7D20789291D26",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../i2s_receiver_tb.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "i2s_receiver_0": "",
+      "i2s_transceiver_0": ""
+    },
+    "ports": {
+      "reset_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "BCK": {
+        "direction": "I"
+      },
+      "left_channel_out": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "right_channel_out": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "left_channel_in": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "right_channel_in": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "LRCK": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "i2s_data": {
+        "type": "data",
+        "direction": "O",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "i2s_receiver_0": {
+        "vlnv": "xilinx.com:user:i2s_receiver:1.0",
+        "xci_name": "design_1_i2s_receiver_0_0",
+        "xci_path": "ip\\design_1_i2s_receiver_0_0\\design_1_i2s_receiver_0_0.xci",
+        "inst_hier_path": "i2s_receiver_0"
+      },
+      "i2s_transceiver_0": {
+        "vlnv": "xilinx.com:user:i2s_transceiver:1.0",
+        "xci_name": "design_1_i2s_transceiver_0_0",
+        "xci_path": "ip\\design_1_i2s_transceiver_0_0\\design_1_i2s_transceiver_0_0.xci",
+        "inst_hier_path": "i2s_transceiver_0"
+      }
+    },
+    "nets": {
+      "BCK_1": {
+        "ports": [
+          "BCK",
+          "i2s_transceiver_0/bck",
+          "i2s_receiver_0/BCK"
+        ]
+      },
+      "i2s_receiver_0_left_channel": {
+        "ports": [
+          "i2s_receiver_0/left_channel",
+          "left_channel_out"
+        ]
+      },
+      "i2s_receiver_0_right_channel": {
+        "ports": [
+          "i2s_receiver_0/right_channel",
+          "right_channel_out"
+        ]
+      },
+      "i2s_transceiver_0_lrck": {
+        "ports": [
+          "i2s_transceiver_0/lrck",
+          "i2s_receiver_0/LRCK",
+          "LRCK"
+        ]
+      },
+      "i2s_transceiver_0_sdata": {
+        "ports": [
+          "i2s_transceiver_0/sdata",
+          "i2s_receiver_0/i2s_data_in",
+          "i2s_data"
+        ]
+      },
+      "left_channel_in_1": {
+        "ports": [
+          "left_channel_in",
+          "i2s_transceiver_0/left_channel"
+        ]
+      },
+      "reset_n_1": {
+        "ports": [
+          "reset_n",
+          "i2s_transceiver_0/reset_n",
+          "i2s_receiver_0/reset_n"
+        ]
+      },
+      "right_channel_in_1": {
+        "ports": [
+          "right_channel_in",
+          "i2s_transceiver_0/right_channel"
+        ]
+      }
+    }
+  }
+}
