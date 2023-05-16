@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"ps_to_pl": {
+			"proto_instances": {
+			}
+		}
+	}
+}
