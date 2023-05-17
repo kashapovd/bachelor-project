@@ -2,3 +2,6 @@ Running: xsim.dir/i2s_receiver_tb_behav/xsimk.exe -simmode gui -wdb i2s_receiver
 Design successfully loaded
 Design Loading Memory Usage: 7244 KB (Peak: 7244 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 15836 KB (Peak: 15836 KB)
+Simulation CPU Usage: 233 ms

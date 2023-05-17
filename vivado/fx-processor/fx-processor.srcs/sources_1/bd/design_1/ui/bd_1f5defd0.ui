@@ -1,33 +1,95 @@
 {
-   "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.877786",
-   "Default View_TopLeft":"-236,-392",
+   "ActiveEmotionalView":"Reduced Jogs",
+   "Addressing View_Layers":"/Net:false|/processing_system7_0_FCLK_CLK0:false|/BCK_1:false|/clk_wiz_0_clk_out1:false|",
+   "Addressing View_ScaleFactor":"1.0",
+   "Addressing View_TopLeft":"-492,-321",
+   "Color Coded_ScaleFactor":"0.806887",
+   "Color Coded_TopLeft":"-107,-84",
+   "Default View_ScaleFactor":"0.649349",
+   "Default View_TopLeft":"-231,-842",
+   "Display-PortTypeClock":"true",
+   "Display-PortTypeOthers":"true",
+   "Display-PortTypeReset":"true",
    "ExpandedHierarchyInLayout":"",
+   "Grouping and No Loops_ScaleFactor":"1.0",
+   "Grouping and No Loops_TopLeft":"-117,-66",
+   "Interfaces View_Layers":"/Net:false|/processing_system7_0_FCLK_CLK0:false|/BCK_1:false|/clk_wiz_0_clk_out1:false|",
+   "Interfaces View_ScaleFactor":"1.0",
+   "Interfaces View_TopLeft":"-372,-390",
+   "No Loops_ScaleFactor":"0.840957",
+   "No Loops_TopLeft":"-106,-98",
+   "Reduced Jogs_ExpandedHierarchyInLayout":"",
+   "Reduced Jogs_Layers":"/Net:true|/processing_system7_0_FCLK_CLK0:true|/BCK_1:true|/clk_wiz_0_clk_out1:true|",
+   "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port port-id_DATA_out -pg 1 -lvl 5 -x 1220 -y 80 -defaultsOSRD
+preplace port port-id_LRCK_out -pg 1 -lvl 5 -x 1220 -y 60 -defaultsOSRD
+preplace port port-id_SCKI -pg 1 -lvl 5 -x 1220 -y 440 -defaultsOSRD
+preplace port port-id_reset_n -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port port-id_DATA_in -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port port-id_BCK -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port port-id_LRCK_in -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_FX_EN -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace port port-id_FX_SW -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace port port-id_FX_ACT -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
+preplace inst i2s_receiver_0 -pg 1 -lvl 2 -x 470 -y 120 -defaultsOSRD -pinY reset_n 0L -pinY BCK 20L -pinY LRCK 40L -pinY i2s_data_in 60L -pinBusY left_channel 40R -pinBusY right_channel 60R
+preplace inst i2s_transceiver_0 -pg 1 -lvl 4 -x 1080 -y 60 -swap {0 5 2 3 1 4} -defaultsOSRD -pinY bck 0L -pinY reset_n 280L -pinY lrck 0R -pinY sdata 20R -pinBusY left_channel 100L -pinBusY right_channel 120L
+preplace inst clk_wiz_0 -pg 1 -lvl 4 -x 1080 -y 440 -defaultsOSRD -pinY resetn 0L -pinY clk_in1 20L -pinY clk_out1 0R -pinY locked 20R
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 170 -y 240 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 24 23} -defaultsOSRD -pinY DDR 0R -pinY FIXED_IO 20R -pinY FCLK_CLK0 60R -pinY FCLK_RESET0_N 40R
+preplace inst fx_0 -pg 1 -lvl 3 -x 790 -y 160 -swap {3 9 2 0 1 5 6 4 7 8} -defaultsOSRD -pinY enable 140L -pinY clk 220L -pinY reset_n 80L -pinBusY left_channel_in 0L -pinBusY right_channel_in 20L -pinBusY left_channel_out 0R -pinBusY right_channel_out 20R -pinBusY fx_num 160L -pinY param1 180L -pinY param2 200L
+preplace inst fx_control_0 -pg 1 -lvl 2 -x 470 -y 300 -swap {1 0 2 3 4 7 8 6 5} -defaultsOSRD -pinY clk 20L -pinY reset_n 0L -pinY en 60L -pinY fx_switch 80L -pinY fx_activate 100L -pinY param1 40R -pinY param2 60R -pinBusY fx_num 20R -pinY enable_fx 0R
+preplace netloc Net 1 0 4 NJ 120 340 240 600 440 960
+preplace netloc i2s_transceiver_0_sdata 1 4 1 NJ 80
+preplace netloc i2s_transceiver_0_lrck 1 4 1 NJ 60
+preplace netloc clk_wiz_0_clk_out1 1 4 1 NJ 440
+preplace netloc DATA_in_1 1 0 2 NJ 180 NJ
+preplace netloc BCK_1 1 0 4 NJ 140 320 60 NJ 60 NJ
+preplace netloc LRCK_in_1 1 0 2 20J 160 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 320 460 620 460 NJ
+preplace netloc i2s_receiver_0_left_channel 1 2 1 N 160
+preplace netloc i2s_receiver_0_right_channel 1 2 1 N 180
+preplace netloc fx_0_left_channel_out 1 3 1 N 160
+preplace netloc fx_0_right_channel_out 1 3 1 N 180
+preplace netloc FX_EN_1 1 0 2 NJ 360 NJ
+preplace netloc FX_SW_1 1 0 2 NJ 380 NJ
+preplace netloc FX_ACT_1 1 0 2 NJ 400 NJ
+preplace netloc fx_control_0_param1 1 2 1 N 340
+preplace netloc fx_control_0_param2 1 2 1 N 360
+preplace netloc fx_control_0_fx_num 1 2 1 N 320
+preplace netloc fx_control_0_enable_fx 1 2 1 N 300
+levelinfo -pg 1 0 170 470 790 1080 1220
+pagesize -pg 1 -db -bbox -sgen -110 0 1340 520
+",
+   "Reduced Jogs_ScaleFactor":"0.840957",
+   "Reduced Jogs_TopLeft":"-106,-98",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
 #  -string -flagsOSRD
-preplace port port-id_DATA_out -pg 1 -lvl 5 -x 1040 -y -100 -defaultsOSRD
-preplace port port-id_LRCK_out -pg 1 -lvl 5 -x 1040 -y -120 -defaultsOSRD
-preplace port port-id_SCKI -pg 1 -lvl 5 -x 1040 -y -80 -defaultsOSRD
+preplace port port-id_DATA_out -pg 1 -lvl 5 -x 1380 -y -100 -defaultsOSRD
+preplace port port-id_LRCK_out -pg 1 -lvl 5 -x 1380 -y -120 -defaultsOSRD
+preplace port port-id_SCKI -pg 1 -lvl 5 -x 1380 -y -80 -defaultsOSRD
 preplace port port-id_reset_n -pg 1 -lvl 0 -x -130 -y -250 -defaultsOSRD
 preplace port port-id_DATA_in -pg 1 -lvl 0 -x -130 -y -210 -defaultsOSRD
 preplace port port-id_BCK -pg 1 -lvl 0 -x -130 -y -270 -defaultsOSRD
 preplace port port-id_LRCK_in -pg 1 -lvl 0 -x -130 -y -230 -defaultsOSRD
-preplace inst i2s_receiver_0 -pg 1 -lvl 2 -x 450 -y -170 -defaultsOSRD
-preplace inst i2s_transceiver_0 -pg 1 -lvl 4 -x 890 -y -200 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 680 -y -30 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 100 -y -30 -defaultsOSRD
-preplace netloc i2s_receiver_0_left_channel 1 2 2 N -180 770
-preplace netloc i2s_receiver_0_right_channel 1 2 2 N -160 770
-preplace netloc Net 1 0 4 N -250 270 -260 580J -210 N
-preplace netloc i2s_transceiver_0_sdata 1 4 1 1010 -190n
-preplace netloc i2s_transceiver_0_lrck 1 4 1 1020 -210n
-preplace netloc clk_wiz_0_clk_out1 1 3 2 NJ -40 1020
+preplace inst i2s_receiver_0 -pg 1 -lvl 2 -x 710 -y -170 -defaultsOSRD
+preplace inst i2s_transceiver_0 -pg 1 -lvl 4 -x 1230 -y -200 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -x 1010 -y -30 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 350 -y -480 -defaultsOSRD
+preplace inst fx_0 -pg 1 -lvl 2 -x 710 -y -430 -defaultsOSRD
+preplace netloc Net 1 0 4 N -250 500 -70 920J -210 N
+preplace netloc i2s_transceiver_0_sdata 1 4 1 1350 -190n
+preplace netloc i2s_transceiver_0_lrck 1 4 1 1360 -210n
+preplace netloc clk_wiz_0_clk_out1 1 3 2 NJ -40 1360
 preplace netloc DATA_in_1 1 0 2 -110 -140 N
-preplace netloc BCK_1 1 0 4 NJ -270 260 -270 NJ -270 770
-preplace netloc LRCK_in_1 1 0 2 N -230 250
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 NJ -20 N
-levelinfo -pg 1 -130 100 450 680 890 1040
-pagesize -pg 1 -db -bbox -sgen -240 -530 1160 180
+preplace netloc BCK_1 1 0 4 NJ -270 520 -80 910J -230 N
+preplace netloc LRCK_in_1 1 0 2 N -230 510
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 540J -560 900
+preplace netloc i2s_receiver_0_left_channel 1 1 2 530 -270 890
+preplace netloc i2s_receiver_0_right_channel 1 1 2 540 -260 880
+preplace netloc fx_0_left_channel_out 1 2 2 NJ -440 1110
+preplace netloc fx_0_right_channel_out 1 2 2 NJ -420 1100
+levelinfo -pg 1 -130 350 710 1010 1230 1380
+pagesize -pg 1 -db -bbox -sgen -240 -680 1500 180
 "
 }
 

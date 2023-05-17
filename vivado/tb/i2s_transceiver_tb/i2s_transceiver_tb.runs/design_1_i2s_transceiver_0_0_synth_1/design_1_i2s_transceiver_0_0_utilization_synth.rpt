@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Mon May 15 18:27:01 2023
+| Date         : Tue May 16 15:36:34 2023
 | Host         : KOMPUTER running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_i2s_transceiver_0_0_utilization_synth.rpt -pb design_1_i2s_transceiver_0_0_utilization_synth.pb
 | Design       : design_1_i2s_transceiver_0_0
@@ -30,14 +30,14 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |    8 |     0 |          0 |     17600 |  0.05 |
-|   LUT as Logic          |    8 |     0 |          0 |     17600 |  0.05 |
+| Slice LUTs*             |   31 |     0 |          0 |     17600 |  0.18 |
+|   LUT as Logic          |   31 |     0 |          0 |     17600 |  0.18 |
 |   LUT as Memory         |    0 |     0 |          0 |      6000 |  0.00 |
-| Slice Registers         |    7 |     0 |          0 |     35200 |  0.02 |
-|   Register as Flip Flop |    7 |     0 |          0 |     35200 |  0.02 |
+| Slice Registers         |   72 |     0 |          0 |     35200 |  0.20 |
+|   Register as Flip Flop |   72 |     0 |          0 |     35200 |  0.20 |
 |   Register as Latch     |    0 |     0 |          0 |     35200 |  0.00 |
-| F7 Muxes                |    0 |     0 |          0 |      8800 |  0.00 |
-| F8 Muxes                |    0 |     0 |          0 |      4400 |  0.00 |
+| F7 Muxes                |    2 |     0 |          0 |      8800 |  0.02 |
+| F8 Muxes                |    1 |     0 |          0 |      4400 |  0.02 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 2     |          Yes |           - |          Set |
-| 5     |          Yes |           - |        Reset |
+| 70    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -146,12 +146,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| FDCE     |   70 |        Flop & Latch |
+| LUT6     |   21 |                 LUT |
 | LUT2     |    7 |                 LUT |
-| FDCE     |    5 |        Flop & Latch |
+| MUXF7    |    2 |               MuxFx |
+| LUT1     |    2 |                 LUT |
 | FDPE     |    2 |        Flop & Latch |
 | CARRY4   |    2 |          CarryLogic |
-| LUT6     |    1 |                 LUT |
-| LUT1     |    1 |                 LUT |
+| MUXF8    |    1 |               MuxFx |
+| LUT5     |    1 |                 LUT |
+| LUT4     |    1 |                 LUT |
+| LUT3     |    1 |                 LUT |
 +----------+------+---------------------+
 
 

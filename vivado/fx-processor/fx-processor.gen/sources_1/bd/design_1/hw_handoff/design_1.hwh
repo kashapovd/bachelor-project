@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May 16 18:12:57 2023" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 17 13:30:11 2023" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -24,6 +24,8 @@
         <CONNECTION INSTANCE="i2s_transceiver_0" PORT="reset_n"/>
         <CONNECTION INSTANCE="i2s_receiver_0" PORT="reset_n"/>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="resetn"/>
+        <CONNECTION INSTANCE="fx_0" PORT="reset_n"/>
+        <CONNECTION INSTANCE="fx_control_0" PORT="reset_n"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="DATA_in" SIGIS="undef" SIGNAME="External_Ports_DATA_in">
@@ -40,6 +42,21 @@
     <PORT DIR="I" NAME="LRCK_in" SIGIS="undef" SIGNAME="External_Ports_LRCK_in">
       <CONNECTIONS>
         <CONNECTION INSTANCE="i2s_receiver_0" PORT="LRCK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="FX_EN" SIGIS="undef" SIGNAME="External_Ports_FX_EN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="fx_control_0" PORT="en"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="FX_SW" SIGIS="undef" SIGNAME="External_Ports_FX_SW">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="fx_control_0" PORT="fx_switch"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="FX_ACT" SIGIS="undef" SIGNAME="External_Ports_FX_ACT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="fx_control_0" PORT="fx_activate"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -646,6 +663,122 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/fx_0" HWVERSION="1.0" INSTANCE="fx_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fx" VLNV="xilinx.com:user:fx:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="WIDTH" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_fx_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="fx_control_0_enable_fx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fx_control_0" PORT="enable_fx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="left_channel_in" RIGHT="0" SIGIS="undef" SIGNAME="i2s_receiver_0_left_channel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_receiver_0" PORT="left_channel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="right_channel_in" RIGHT="0" SIGIS="undef" SIGNAME="i2s_receiver_0_right_channel">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_receiver_0" PORT="right_channel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="left_channel_out" RIGHT="0" SIGIS="undef" SIGNAME="fx_0_left_channel_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="left_channel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="right_channel_out" RIGHT="0" SIGIS="undef" SIGNAME="fx_0_right_channel_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="right_channel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="fx_num" RIGHT="0" SIGIS="undef" SIGNAME="fx_control_0_fx_num">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fx_control_0" PORT="fx_num"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="param1" SIGIS="undef" SIGNAME="fx_control_0_param1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fx_control_0" PORT="param1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="param2" SIGIS="undef" SIGNAME="fx_control_0_param2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fx_control_0" PORT="param2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/fx_control_0" HWVERSION="1.0" INSTANCE="fx_control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fx_control" VLNV="xilinx.com:user:fx_control:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_fx_control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="External_Ports_FX_EN">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="FX_EN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="fx_switch" SIGIS="undef" SIGNAME="External_Ports_FX_SW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="FX_SW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="fx_activate" SIGIS="undef" SIGNAME="External_Ports_FX_ACT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="FX_ACT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="param1" SIGIS="undef" SIGNAME="fx_control_0_param1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fx_0" PORT="param1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="param2" SIGIS="undef" SIGNAME="fx_control_0_param2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fx_0" PORT="param2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="fx_num" RIGHT="0" SIGIS="undef" SIGNAME="fx_control_0_fx_num">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fx_0" PORT="fx_num"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="enable_fx" SIGIS="undef" SIGNAME="fx_control_0_enable_fx">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="fx_0" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="2" FULLNAME="/i2s_receiver_0" HWVERSION="1.0" INSTANCE="i2s_receiver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2s_receiver" VLNV="xilinx.com:user:i2s_receiver:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -676,12 +809,12 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="left_channel" RIGHT="0" SIGIS="undef" SIGNAME="i2s_receiver_0_left_channel">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="left_channel"/>
+            <CONNECTION INSTANCE="fx_0" PORT="left_channel_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="right_channel" RIGHT="0" SIGIS="undef" SIGNAME="i2s_receiver_0_right_channel">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2s_transceiver_0" PORT="right_channel"/>
+            <CONNECTION INSTANCE="fx_0" PORT="right_channel_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -716,14 +849,14 @@
             <CONNECTION INSTANCE="External_Ports" PORT="DATA_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="left_channel" RIGHT="0" SIGIS="undef" SIGNAME="i2s_receiver_0_left_channel">
+        <PORT DIR="I" LEFT="31" NAME="left_channel" RIGHT="0" SIGIS="undef" SIGNAME="fx_0_left_channel_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2s_receiver_0" PORT="left_channel"/>
+            <CONNECTION INSTANCE="fx_0" PORT="left_channel_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="right_channel" RIGHT="0" SIGIS="undef" SIGNAME="i2s_receiver_0_right_channel">
+        <PORT DIR="I" LEFT="31" NAME="right_channel" RIGHT="0" SIGIS="undef" SIGNAME="fx_0_right_channel_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2s_receiver_0" PORT="right_channel"/>
+            <CONNECTION INSTANCE="fx_0" PORT="right_channel_out"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1674,6 +1807,8 @@
         <PORT CLKFREQUENCY="50000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
+            <CONNECTION INSTANCE="fx_0" PORT="clk"/>
+            <CONNECTION INSTANCE="fx_control_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst"/>

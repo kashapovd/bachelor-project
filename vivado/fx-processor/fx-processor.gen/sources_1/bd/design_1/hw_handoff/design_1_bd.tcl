@@ -160,6 +160,9 @@ proc create_root_design { parentCell } {
   set BCK [ create_bd_port -dir I -type clk -freq_hz 5000000 BCK ]
   set DATA_in [ create_bd_port -dir I DATA_in ]
   set DATA_out [ create_bd_port -dir O DATA_out ]
+  set FX_ACT [ create_bd_port -dir I FX_ACT ]
+  set FX_EN [ create_bd_port -dir I FX_EN ]
+  set FX_SW [ create_bd_port -dir I FX_SW ]
   set LRCK_in [ create_bd_port -dir I LRCK_in ]
   set LRCK_out [ create_bd_port -dir O LRCK_out ]
   set SCKI [ create_bd_port -dir O -type clk SCKI ]
@@ -177,6 +180,12 @@ proc create_root_design { parentCell } {
    CONFIG.RESET_PORT {resetn} \
    CONFIG.RESET_TYPE {ACTIVE_LOW} \
  ] $clk_wiz_0
+
+  # Create instance: fx_0, and set properties
+  set fx_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:fx:1.0 fx_0 ]
+
+  # Create instance: fx_control_0, and set properties
+  set fx_control_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:fx_control:1.0 fx_control_0 ]
 
   # Create instance: i2s_receiver_0, and set properties
   set i2s_receiver_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:i2s_receiver:1.0 i2s_receiver_0 ]
@@ -197,14 +206,23 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net BCK_1 [get_bd_ports BCK] [get_bd_pins i2s_receiver_0/BCK] [get_bd_pins i2s_transceiver_0/bck]
   connect_bd_net -net DATA_in_1 [get_bd_ports DATA_in] [get_bd_pins i2s_receiver_0/i2s_data_in]
+  connect_bd_net -net FX_ACT_1 [get_bd_ports FX_ACT] [get_bd_pins fx_control_0/fx_activate]
+  connect_bd_net -net FX_EN_1 [get_bd_ports FX_EN] [get_bd_pins fx_control_0/en]
+  connect_bd_net -net FX_SW_1 [get_bd_ports FX_SW] [get_bd_pins fx_control_0/fx_switch]
   connect_bd_net -net LRCK_in_1 [get_bd_ports LRCK_in] [get_bd_pins i2s_receiver_0/LRCK]
-  connect_bd_net -net Net [get_bd_ports reset_n] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins i2s_receiver_0/reset_n] [get_bd_pins i2s_transceiver_0/reset_n]
+  connect_bd_net -net Net [get_bd_ports reset_n] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins fx_0/reset_n] [get_bd_pins fx_control_0/reset_n] [get_bd_pins i2s_receiver_0/reset_n] [get_bd_pins i2s_transceiver_0/reset_n]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports SCKI] [get_bd_pins clk_wiz_0/clk_out1]
-  connect_bd_net -net i2s_receiver_0_left_channel [get_bd_pins i2s_receiver_0/left_channel] [get_bd_pins i2s_transceiver_0/left_channel]
-  connect_bd_net -net i2s_receiver_0_right_channel [get_bd_pins i2s_receiver_0/right_channel] [get_bd_pins i2s_transceiver_0/right_channel]
+  connect_bd_net -net fx_0_left_channel_out [get_bd_pins fx_0/left_channel_out] [get_bd_pins i2s_transceiver_0/left_channel]
+  connect_bd_net -net fx_0_right_channel_out [get_bd_pins fx_0/right_channel_out] [get_bd_pins i2s_transceiver_0/right_channel]
+  connect_bd_net -net fx_control_0_enable_fx [get_bd_pins fx_0/enable] [get_bd_pins fx_control_0/enable_fx]
+  connect_bd_net -net fx_control_0_fx_num [get_bd_pins fx_0/fx_num] [get_bd_pins fx_control_0/fx_num]
+  connect_bd_net -net fx_control_0_param1 [get_bd_pins fx_0/param1] [get_bd_pins fx_control_0/param1]
+  connect_bd_net -net fx_control_0_param2 [get_bd_pins fx_0/param2] [get_bd_pins fx_control_0/param2]
+  connect_bd_net -net i2s_receiver_0_left_channel [get_bd_pins fx_0/left_channel_in] [get_bd_pins i2s_receiver_0/left_channel]
+  connect_bd_net -net i2s_receiver_0_right_channel [get_bd_pins fx_0/right_channel_in] [get_bd_pins i2s_receiver_0/right_channel]
   connect_bd_net -net i2s_transceiver_0_lrck [get_bd_ports LRCK_out] [get_bd_pins i2s_transceiver_0/lrck]
   connect_bd_net -net i2s_transceiver_0_sdata [get_bd_ports DATA_out] [get_bd_pins i2s_transceiver_0/sdata]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins fx_0/clk] [get_bd_pins fx_control_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
 
   # Create address segments
 

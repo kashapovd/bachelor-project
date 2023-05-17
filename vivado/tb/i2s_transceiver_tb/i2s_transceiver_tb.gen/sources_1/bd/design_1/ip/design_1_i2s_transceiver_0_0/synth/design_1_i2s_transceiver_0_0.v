@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:i2s_transceiver:1.0
-// IP Revision: 5
+// IP Revision: 9
 
 (* X_CORE_INFO = "i2s_transceiver,Vivado 2021.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_i2s_transceiver_0_0,i2s_transceiver,{}" *)
-(* CORE_GENERATION_INFO = "design_1_i2s_transceiver_0_0,i2s_transceiver,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=i2s_transceiver,x_ipVersion=1.0,x_ipCoreRevision=5,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,WIDHT=32,PRESC=32}" *)
+(* CORE_GENERATION_INFO = "design_1_i2s_transceiver_0_0,i2s_transceiver,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=i2s_transceiver,x_ipVersion=1.0,x_ipCoreRevision=9,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,WIDHT=32,PRESC=32}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_i2s_transceiver_0_0 (

@@ -1,0 +1,37 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.615573",
+   "Default View_TopLeft":"-622,-653",
+   "ExpandedHierarchyInLayout":"",
+   "commentid":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -290 -y -170 -defaultsOSRD
+preplace port port-id_reset_n -pg 1 -lvl 0 -x -290 -y -150 -defaultsOSRD
+preplace port port-id_en_gain -pg 1 -lvl 0 -x -290 -y -440 -defaultsOSRD
+preplace port port-id_en_overdrive -pg 1 -lvl 0 -x -290 -y -420 -defaultsOSRD
+preplace portBus left_channel_in -pg 1 -lvl 0 -x -290 -y -120 -defaultsOSRD
+preplace portBus right_channel_in -pg 1 -lvl 0 -x -290 -y -70 -defaultsOSRD
+preplace portBus param1 -pg 1 -lvl 0 -x -290 -y -340 -defaultsOSRD
+preplace portBus param2 -pg 1 -lvl 0 -x -290 -y -320 -defaultsOSRD
+preplace portBus left_channel_out -pg 1 -lvl 3 -x 540 -y -130 -defaultsOSRD
+preplace portBus right_channel_out -pg 1 -lvl 3 -x 540 -y -110 -defaultsOSRD
+preplace inst overdrive_0 -pg 1 -lvl 2 -x 350 -y -120 -defaultsOSRD
+preplace inst gain_0 -pg 1 -lvl 1 -x -60 -y -120 -defaultsOSRD
+preplace netloc gain_0_left_channel_out 1 1 1 120 -130n
+preplace netloc gain_0_right_channel_out 1 1 1 110 -110n
+preplace netloc left_channel_in_1 1 0 1 -270 -120n
+preplace netloc right_channel_in_1 1 0 1 N -70
+preplace netloc clk_1 1 0 2 -250 -240 150
+preplace netloc reset_n_1 1 0 2 -240 -230 120
+preplace netloc param1_1 1 0 2 -260 -10 130
+preplace netloc param2_1 1 0 2 NJ -320 140
+preplace netloc overdrive_0_left_channel_out 1 2 1 N -130
+preplace netloc overdrive_0_right_channel_out 1 2 1 N -110
+preplace netloc en_overdrive_1 1 0 2 NJ -420 160
+preplace netloc en_gain_1 1 0 1 -230 -440n
+levelinfo -pg 1 -290 -60 350 540
+pagesize -pg 1 -db -bbox -sgen -480 -520 740 240
+"
+}
+

@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/effects/gain/gain.srcs/sources_1/new/gain.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gain
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/effects/gain/gain.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+ERROR: [VRFC 10-2989] 'bck' is not declared [C:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/effects/gain/gain.srcs/sources_1/new/tb.v:45]
+ERROR: [VRFC 10-2865] module 'tb' ignored due to previous errors [C:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/effects/gain/gain.srcs/sources_1/new/tb.v:23]
