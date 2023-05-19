@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Mon May 15 20:44:22 2023
+-- Date        : Thu May 18 21:09:31 2023
 -- Host        : KOMPUTER running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/yaroslav/Desktop/bachelor-project/vivado/tb/i2s_receiver_tb/i2s_receiver_tb.gen/sources_1/bd/design_1/ip/design_1_i2s_transceiver_0_0/design_1_i2s_transceiver_0_0_stub.vhdl

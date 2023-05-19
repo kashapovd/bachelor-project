@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module i2s_receiver #(
-	parameter AUDIO_DW		= 32
+	parameter WIDTH		= 32
 )(
     input reset_n,
 	input BCK,
@@ -28,12 +28,12 @@ module i2s_receiver #(
 	input i2s_data_in,
 
 	// Parallel datastreams
-	output reg [AUDIO_DW-1:0] left_channel,
-	output reg [AUDIO_DW-1:0] right_channel
+	output reg [WIDTH-1:0] left_channel,
+	output reg [WIDTH-1:0] right_channel
 );
 
-reg [AUDIO_DW-1:0]	left;
-reg [AUDIO_DW-1:0]	right;
+reg [WIDTH-1:0]	left;
+reg [WIDTH-1:0]	right;
 reg	lrclk_r;
 wire lrclk_nedge;
 
@@ -45,9 +45,9 @@ always @(posedge BCK)
 // sdata msb is valid one clock cycle after lrclk switches
 always @(posedge BCK)
 	if (lrclk_r)
-		right <= {right[AUDIO_DW-2:0], i2s_data_in};
+		right <= {right[WIDTH-2:0], i2s_data_in};
 	else
-		left <= {left[AUDIO_DW-2:0], i2s_data_in};
+		left <= {left[WIDTH-2:0], i2s_data_in};
 
 always @(posedge BCK or negedge reset_n)
 	if (!reset_n) begin
@@ -56,6 +56,6 @@ always @(posedge BCK or negedge reset_n)
 	end 
 	else if (lrclk_nedge) begin
 		left_channel <= left;
-		right_channel <= {right[AUDIO_DW-2:0], i2s_data_in};
+		right_channel <= {right[WIDTH-2:0], i2s_data_in};
 	end
 endmodule

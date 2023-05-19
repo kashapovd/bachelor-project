@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "i2s_receiver,Vivado 2021.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_i2s_receiver_0_0,i2s_receiver,{}" *)
-(* CORE_GENERATION_INFO = "design_1_i2s_receiver_0_0,i2s_receiver,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=i2s_receiver,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,AUDIO_DW=32}" *)
+(* CORE_GENERATION_INFO = "design_1_i2s_receiver_0_0,i2s_receiver,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=i2s_receiver,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_i2s_receiver_0_0 (
@@ -74,7 +74,7 @@ output wire [31 : 0] left_channel;
 output wire [31 : 0] right_channel;
 
   i2s_receiver #(
-    .AUDIO_DW(32)
+    .WIDTH(32)
   ) inst (
     .reset_n(reset_n),
     .BCK(BCK),

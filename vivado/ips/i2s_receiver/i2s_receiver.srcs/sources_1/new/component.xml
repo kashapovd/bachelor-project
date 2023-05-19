@@ -223,13 +223,23 @@
       <xilinx:displayName>i2s_receiver_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-05-15T15:00:28Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2023-05-18T14:14:38Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@7c70c925_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@5ac5efb5_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@59cfbc4b_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@67f247af_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@6021b667_ARCHIVE_LOCATION">c:/users/yaroslav/desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@74d94bab_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4a3e8d70_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5efa5db4_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2ec1895a_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b88c54f_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@25acdc27_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@75d9ec9e_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1aa7701_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d6c4b98_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@45ed1148_ARCHIVE_LOCATION">c:/Users/yaroslav/Desktop/bachelor-project/vivado/ips/i2s_receiver/i2s_receiver.srcs/sources_1/new</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

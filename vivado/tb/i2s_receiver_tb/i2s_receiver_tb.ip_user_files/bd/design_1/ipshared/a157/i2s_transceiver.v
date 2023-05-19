@@ -39,20 +39,20 @@ reg [WIDHT-1:0]	right;
 reg [WIDHT-1:0]	left;
 
 always @(negedge bck or negedge reset_n)
-	if (!reset_n) begin
+	if (!reset_n)
 		bit_cnt <= 1;
-		sdata <= 0;
-		left <= 0;
-		right <= 0;
-    end
 	else if (bit_cnt >= PRESC)
 		bit_cnt <= 1;
 	else
 		bit_cnt <= bit_cnt + 1;
 
 // Sample channels on the transfer of the last bit of the right channel
-always @(negedge bck)
-	if (bit_cnt == PRESC && lrck) begin
+always @(negedge bck or negedge reset_n)
+    if (!reset_n) begin
+        left <= 0;
+		right <= 0;
+    end
+	else if (bit_cnt == PRESC && lrck) begin
         right <= right_channel;
         left <= left_channel;
 	end
@@ -64,7 +64,10 @@ always @(negedge bck or negedge reset_n)
 	else if (bit_cnt == PRESC)
 		lrck <= ~lrck;
 
-always @(negedge bck)
-	sdata <= lrck ? right[WIDHT - bit_cnt] : left[WIDHT - bit_cnt];
+always @(negedge bck or negedge reset_n)
+    if (!reset_n)
+        sdata <= 0;
+    else
+        sdata <= lrck ? right[WIDHT - bit_cnt] : left[WIDHT - bit_cnt];
 
 endmodule

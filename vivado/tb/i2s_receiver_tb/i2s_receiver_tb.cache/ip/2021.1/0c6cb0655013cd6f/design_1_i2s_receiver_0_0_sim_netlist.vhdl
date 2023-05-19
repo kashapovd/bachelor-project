@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Mon May 15 20:23:45 2023
+-- Date        : Thu May 18 21:09:31 2023
 -- Host        : KOMPUTER running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/yaroslav/Desktop/bachelor-project/vivado/tb/i2s_receiver_tb/i2s_receiver_tb.gen/sources_1/bd/design_1/ip/design_1_i2s_receiver_0_0/design_1_i2s_receiver_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_i2s_receiver_0_0_sim_netlist.vhdl
 -- Design      : design_1_i2s_receiver_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_i2s_receiver_0_0_i2s_receiver is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2s_receiver is
   port (
     left_channel : out STD_LOGIC_VECTOR ( 31 downto 0 );
     right_channel : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -23,11 +23,9 @@ entity design_1_i2s_receiver_0_0_i2s_receiver is
     i2s_data_in : in STD_LOGIC;
     reset_n : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_i2s_receiver_0_0_i2s_receiver : entity is "i2s_receiver";
-end design_1_i2s_receiver_0_0_i2s_receiver;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2s_receiver;
 
-architecture STRUCTURE of design_1_i2s_receiver_0_0_i2s_receiver is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2s_receiver is
   signal \left_channel[31]_i_2_n_0\ : STD_LOGIC;
   signal \left_reg_n_0_[31]\ : STD_LOGIC;
   signal lrclk_nedge : STD_LOGIC;
@@ -1090,7 +1088,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_i2s_receiver_0_0 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     reset_n : in STD_LOGIC;
     BCK : in STD_LOGIC;
@@ -1100,24 +1098,24 @@ entity design_1_i2s_receiver_0_0 is
     right_channel : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
-  attribute NotValidForBitStream of design_1_i2s_receiver_0_0 : entity is true;
+  attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_1_i2s_receiver_0_0 : entity is "design_1_i2s_receiver_0_0,i2s_receiver,{}";
+  attribute CHECK_LICENSE_TYPE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "design_1_i2s_receiver_0_0,i2s_receiver,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of design_1_i2s_receiver_0_0 : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "yes";
   attribute IP_DEFINITION_SOURCE : string;
-  attribute IP_DEFINITION_SOURCE of design_1_i2s_receiver_0_0 : entity is "package_project";
+  attribute IP_DEFINITION_SOURCE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "package_project";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of design_1_i2s_receiver_0_0 : entity is "i2s_receiver,Vivado 2021.1";
-end design_1_i2s_receiver_0_0;
+  attribute X_CORE_INFO of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "i2s_receiver,Vivado 2021.1";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture STRUCTURE of design_1_i2s_receiver_0_0 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of reset_n : signal is "xilinx.com:signal:reset:1.0 reset_n RST";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of reset_n : signal is "XIL_INTERFACENAME reset_n, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
-inst: entity work.design_1_i2s_receiver_0_0_i2s_receiver
+inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2s_receiver
      port map (
       BCK => BCK,
       LRCK => LRCK,

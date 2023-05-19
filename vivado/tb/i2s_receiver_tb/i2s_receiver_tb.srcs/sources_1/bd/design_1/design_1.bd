@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB5F7D20789291D26",
+      "boundary_crc": "0xB5F7D2074C50C4F7",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../i2s_receiver_tb.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -131,8 +131,8 @@
       "BCK_1": {
         "ports": [
           "BCK",
-          "i2s_transceiver_0/bck",
-          "i2s_receiver_0/BCK"
+          "i2s_receiver_0/BCK",
+          "i2s_transceiver_0/bck"
         ]
       },
       "i2s_receiver_0_left_channel": {
@@ -150,15 +150,15 @@
       "i2s_transceiver_0_lrck": {
         "ports": [
           "i2s_transceiver_0/lrck",
-          "i2s_receiver_0/LRCK",
-          "LRCK"
+          "LRCK",
+          "i2s_receiver_0/LRCK"
         ]
       },
       "i2s_transceiver_0_sdata": {
         "ports": [
           "i2s_transceiver_0/sdata",
-          "i2s_receiver_0/i2s_data_in",
-          "i2s_data"
+          "i2s_data",
+          "i2s_receiver_0/i2s_data_in"
         ]
       },
       "left_channel_in_1": {
@@ -170,8 +170,8 @@
       "reset_n_1": {
         "ports": [
           "reset_n",
-          "i2s_transceiver_0/reset_n",
-          "i2s_receiver_0/reset_n"
+          "i2s_receiver_0/reset_n",
+          "i2s_transceiver_0/reset_n"
         ]
       },
       "right_channel_in_1": {

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:i2s_transceiver:1.0
-// IP Revision: 5
+// IP Revision: 9
 
 `timescale 1ns/1ps
 

@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 15 20:43:46 2023" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu May 18 21:08:50 2023" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" NAME="reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_n">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="reset_n"/>
         <CONNECTION INSTANCE="i2s_receiver_0" PORT="reset_n"/>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="reset_n"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="BCK" SIGIS="undef" SIGNAME="External_Ports_BCK">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="bck"/>
         <CONNECTION INSTANCE="i2s_receiver_0" PORT="BCK"/>
+        <CONNECTION INSTANCE="i2s_transceiver_0" PORT="bck"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="31" NAME="left_channel_out" RIGHT="0" SIGIS="data" SIGNAME="i2s_receiver_0_left_channel">
@@ -54,7 +54,7 @@
     <MODULE COREREVISION="2" FULLNAME="/i2s_receiver_0" HWVERSION="1.0" INSTANCE="i2s_receiver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2s_receiver" VLNV="xilinx.com:user:i2s_receiver:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="AUDIO_DW" VALUE="32"/>
+        <PARAMETER NAME="WIDTH" VALUE="32"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_i2s_receiver_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -92,7 +92,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="5" FULLNAME="/i2s_transceiver_0" HWVERSION="1.0" INSTANCE="i2s_transceiver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2s_transceiver" VLNV="xilinx.com:user:i2s_transceiver:1.0">
+    <MODULE COREREVISION="9" FULLNAME="/i2s_transceiver_0" HWVERSION="1.0" INSTANCE="i2s_transceiver_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="i2s_transceiver" VLNV="xilinx.com:user:i2s_transceiver:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="WIDHT" VALUE="32"/>
@@ -113,14 +113,14 @@
         </PORT>
         <PORT DIR="O" NAME="lrck" SIGIS="undef" SIGNAME="i2s_transceiver_0_lrck">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2s_receiver_0" PORT="LRCK"/>
             <CONNECTION INSTANCE="External_Ports" PORT="LRCK"/>
+            <CONNECTION INSTANCE="i2s_receiver_0" PORT="LRCK"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="sdata" SIGIS="undef" SIGNAME="i2s_transceiver_0_sdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2s_receiver_0" PORT="i2s_data_in"/>
             <CONNECTION INSTANCE="External_Ports" PORT="i2s_data"/>
+            <CONNECTION INSTANCE="i2s_receiver_0" PORT="i2s_data_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="left_channel" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_left_channel_in">

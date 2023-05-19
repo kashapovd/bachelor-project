@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Mon May 15 20:23:45 2023
+// Date        : Thu May 18 21:09:31 2023
 // Host        : KOMPUTER running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/yaroslav/Desktop/bachelor-project/vivado/tb/i2s_receiver_tb/i2s_receiver_tb.gen/sources_1/bd/design_1/ip/design_1_i2s_receiver_0_0/design_1_i2s_receiver_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_i2s_receiver_0_0_sim_netlist.v
 // Design      : design_1_i2s_receiver_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,7 +15,7 @@
 (* CHECK_LICENSE_TYPE = "design_1_i2s_receiver_0_0,i2s_receiver,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
 (* X_CORE_INFO = "i2s_receiver,Vivado 2021.1" *) 
 (* NotValidForBitStream *)
-module design_1_i2s_receiver_0_0
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (reset_n,
     BCK,
     LRCK,
@@ -36,7 +36,7 @@ module design_1_i2s_receiver_0_0
   wire reset_n;
   wire [31:0]right_channel;
 
-  design_1_i2s_receiver_0_0_i2s_receiver inst
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2s_receiver inst
        (.BCK(BCK),
         .LRCK(LRCK),
         .i2s_data_in(i2s_data_in),
@@ -45,8 +45,7 @@ module design_1_i2s_receiver_0_0
         .right_channel(right_channel));
 endmodule
 
-(* ORIG_REF_NAME = "i2s_receiver" *) 
-module design_1_i2s_receiver_0_0_i2s_receiver
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2s_receiver
    (left_channel,
     right_channel,
     LRCK,

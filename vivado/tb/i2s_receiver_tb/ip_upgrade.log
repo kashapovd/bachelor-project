@@ -1,6 +1,72 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Thu May 18 21:08:44 2023
+| Host         : KOMPUTER running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2s_transceiver_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_i2s_transceiver_0_0 (xilinx.com:user:i2s_transceiver:1.0) from (Rev. 5) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Thu May 18 21:08:44 2023
+| Host         : KOMPUTER running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_i2s_receiver_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of design_1_i2s_receiver_0_0 (xilinx.com:user:i2s_receiver:1.0 (Rev. 2)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+Parameter 'AUDIO_DW' is no longer present on the upgraded IP 'design_1_i2s_receiver_0_0', and cannot be set to '32'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:i2s_receiver:1.0 -user_name design_1_i2s_receiver_0_0
+set_property -dict "\
+  CONFIG.Component_Name {design_1_i2s_receiver_0_0} \
+  CONFIG.reset_n.INSERT_VIP {0} \
+  CONFIG.reset_n.POLARITY {ACTIVE_LOW} " [get_ips design_1_i2s_receiver_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
 | Date         : Mon May 15 20:23:05 2023
 | Host         : KOMPUTER running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

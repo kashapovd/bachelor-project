@@ -73,7 +73,7 @@ output wire [31 : 0] left_channel;
 output wire [31 : 0] right_channel;
 
   i2s_receiver #(
-    .AUDIO_DW(32)
+    .WIDTH(32)
   ) inst (
     .reset_n(reset_n),
     .BCK(BCK),
